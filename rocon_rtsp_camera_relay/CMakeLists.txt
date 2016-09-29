@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(rocon_rtsp_camera_relay)
 
 find_package(catkin REQUIRED COMPONENTS
+  camera_info_manager
   roscpp
   cv_bridge
   image_transport
@@ -14,7 +15,7 @@ find_package(OpenCV)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES rocon_rtsp_camera_relay
-  CATKIN_DEPENDS roscpp cv_bridge image_transport sensor_msgs std_msgs
+  CATKIN_DEPENDS roscpp cv_bridge image_transport sensor_msgs std_msgs  camera_info_manager
   DEPENDS OpenCV
 )
 
